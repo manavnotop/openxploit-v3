@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { signIn } from "@/lib/auth";
+import { auth, signIn } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
 
-export default function Test(){
+export default async function Test(){
+  const session = await auth();
+  if(session?.user){
+    redirect('/dashboard');
+  }
   return(
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center z-50">
       <Card className="w-[350px] mx-auto">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Welcome to OpenXploit</CardTitle>

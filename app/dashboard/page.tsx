@@ -8,5 +8,9 @@ export default async function Dashboard(){
       this is the dashboard page.
       <SignOut />
     </div>
+    // <DashboardShell>
+    //   {/* <DashboardHeader /> */}
+    //   <DashboardContent />
+    // </DashboardShell>
   );
 }
