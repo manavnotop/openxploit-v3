@@ -49,7 +49,9 @@ export default function LandingPage() {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-gray-300 font-semibold bg-black text-white">
-                  Documentation
+                  <Link href="/docs">
+                    Documentation
+                  </Link>
                 </Button>
               </motion.div>
 
