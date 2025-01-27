@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import { DockerLogoIcon } from "@/components/DockerLogoIcon";
+import { ShieldIcon } from "@/components/ShieldIcon";
 
 export default function LandingPage() {
   return (
@@ -83,38 +85,5 @@ export default function LandingPage() {
         </div>
       </AuroraBackground>
     </div>
-  );
-}
-
-// Icons (Place these in components/ui/icons.tsx)
-function DockerLogoIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M4 8h4v4H4zm0-4h4v4H4zm4 4h4v4H8zm4-4h4v4h-4zm4 0h4v4h-4zm-8 8h4v4H8zm4 0h4v4h-4zm4 0h4v4h-4z"/>
-    </svg>
-  );
-}
-
-function ShieldIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-    </svg>
   );
 }
